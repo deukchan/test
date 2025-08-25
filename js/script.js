@@ -1,48 +1,3 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<title>환율 정보</title>
-<style>
-    body { font-family: Arial, sans-serif; }
-    table { border-collapse: collapse; width: 90%; margin: 20px auto; }
-    th, td { border: 1px solid #333; padding: 8px 12px; text-align: center; }
-    th { background-color: #f2f2f2; }
-    tr:hover { background-color: #f9f9f9; }
-    #controls { text-align: center; margin-top: 20px; }
-    select, button { padding: 6px 12px; margin: 0 5px; }
-    .highlight { font-weight: bold; color: darkgreen; }
-</style>
-</head>
-<body>
-
-
-    
-<h2 style="text-align:center;">환율 정보</h2>
-
-<div id="controls">
-    <select id="currencySelect">
-        <option value="">전체 통화</option>
-    </select>
-    <button id="refreshBtn">새로고침</button>
-</div>
-
-<table id="rateTable">
-    <thead>
-        <tr>
-            <th>통화명</th>
-            <th>통화 단위</th>
-            <th>매매기준율</th>
-            <th>현찰 살때(TTB)</th>
-            <th>현찰 팔때(TTS)</th>
-            <th>송금 보낼때(MTT)</th>
-            <th>송금 받을때(MTB)</th>
-        </tr>
-    </thead>
-    <tbody></tbody>
-</table>
-
-<script>
 const apiKey = "N2RZrkVV5CpJ0kaxXJmq5HbjPiy9qFi4"; 
 const date = "20250825"; 
 const proxy = "https://cors-anywhere.herokuapp.com/";
@@ -114,6 +69,3 @@ currencySelect.addEventListener("change", renderTable);
 refreshBtn.addEventListener("click", fetchRate);
 
 fetchRate();
-</script>
-</body>
-</html>
